@@ -1,22 +1,38 @@
 export default function Featured() {
+  const items = [
+    {
+      tag: "Целевой этап",
+      title: "Обоснование и актуальность",
+      body: "Загрязнение воздуха, воды и почвы в городах достигло критического уровня. Ежегодно более 7 млн человек в мире умирают от последствий загрязнённого воздуха. Актуальность проекта обусловлена ухудшением экологической обстановки в российских городах и недостаточной осведомлённостью населения о последствиях.",
+    },
+    {
+      tag: "Для кого проект",
+      title: "Кому он нужен",
+      body: "Проект предназначен для школьников, учителей, родителей и городских администраций. Он поможет жителям города осознать масштаб экологических проблем и даст инструменты для личного участия в их решении — от раздельного сбора мусора до участия в озеленении.",
+    },
+    {
+      tag: "Потребности",
+      title: "Какие задачи решает",
+      body: "Проект удовлетворяет потребность в доступной, структурированной информации об экологии города. Формирует экологическую грамотность, мотивирует к осознанному поведению и предлагает конкретные шаги: снижение выбросов CO₂, сортировка отходов, посадка деревьев.",
+    },
+  ];
+
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center min-h-screen px-6 py-12 lg:py-0 bg-white">
-      <div className="flex-1 h-[400px] lg:h-[800px] mb-8 lg:mb-0 lg:order-2">
-        <img
-          src="/images/woman-horse.jpg"
-          alt="Woman on horse in countryside"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
-        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Функции, которые не стоят на месте</h3>
-        <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight">
-          Не просто список возможностей — живые, дышащие акценты. Каждая функция адаптируется к движению, контексту и настроению,
-          оживляя продукт с первого взгляда.
-        </p>
-        <button className="bg-black text-white border border-black px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
-          Подробнее
-        </button>
+    <div id="problem" className="bg-white px-6 py-20 lg:py-32">
+      <div className="max-w-6xl mx-auto">
+        <p className="uppercase text-sm tracking-widest text-neutral-400 mb-4">Обоснование проекта</p>
+        <h2 className="text-3xl lg:text-5xl font-bold text-neutral-900 mb-16 max-w-3xl leading-tight">
+          Почему важно исследовать экологию города прямо сейчас
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          {items.map((item) => (
+            <div key={item.tag} className="flex flex-col gap-3 border-t border-neutral-200 pt-6">
+              <span className="uppercase text-xs tracking-widest text-green-700 font-medium">{item.tag}</span>
+              <h3 className="text-xl font-bold text-neutral-900">{item.title}</h3>
+              <p className="text-neutral-600 leading-relaxed text-sm">{item.body}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

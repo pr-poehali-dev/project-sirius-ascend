@@ -25,14 +25,23 @@ export default function Promo() {
         </motion.div>
       </div>
 
-      <h3 className="absolute top-12 right-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg">
-        Анатомия возможностей
+      <div className="absolute inset-0 bg-black/50 z-0" />
+      <h3 id="goals" className="absolute top-12 left-6 text-white uppercase z-10 text-sm md:text-base lg:text-lg tracking-widest">
+        Цели и задачи проекта
       </h3>
 
-      <p className="absolute bottom-12 right-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10">
-        Каждая секция — рамка для твоей истории. Формируй её, миксуй и позволь контенту
-        литься в неожиданные паттерны, заставляя листать дальше.
-      </p>
+      <div className="absolute bottom-12 left-6 right-6 z-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+        <p className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl max-w-2xl leading-tight font-bold">
+          Определить источники загрязнения и предложить реальные решения для жителей города
+        </p>
+        <div className="flex flex-col gap-3 text-white text-sm lg:text-base max-w-xs lg:text-right">
+          <span className="opacity-70 uppercase tracking-wide text-xs">Задачи исследования</span>
+          <span>— Изучить виды городского загрязнения</span>
+          <span>— Выявить главные источники проблем</span>
+          <span>— Проанализировать мировой опыт решений</span>
+          <span>— Разработать рекомендации для горожан</span>
+        </div>
+      </div>
     </div>
   );
 }
